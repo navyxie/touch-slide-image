@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head id="head">
+    <meta charset="UTF-8" />
+    <meta name="viewport" id="chaoBaiDa" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="Description" content="" />
+    <title>swipe</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <script type="text/javascript" src="javascripts/jquery.js"></script>
+    <script type="text/javascript" src="javascripts/core.js"></script>
+    <script type="text/javascript" src="javascripts/common.js"></script>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width:100%;
+        }
+        #wrapper{
+            width: 100%;
+            height:100%;
+            overflow: hidden;
+            background: #fafafa;
+        }
+        #content{
+            overflow: hidden;
+            background: #000;
+            height: 100%;
+            overflow: hidden;
+        }
+        .swipe{
+            float:left;
+            height: 100%;
+            background: #fff;
+            text-align: center;
+            margin-right: 10px;
+        }
+        .swipe img{
+            display: inline-block;
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .last{
+            margin:0;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="content">
+            <div class="swipe"><img src="http://soso7.gtimg.cn/sosopic/0/12958989198140267353/640" /></div>
+            <div class="swipe"><img src="http://soso5.gtimg.cn/sosopic/0/9914291721239805046/640" /></div>
+            <div class="swipe"><img src="http://soso5.gtimg.cn/sosopic/0/3893482421878114926/640" /></div>
+            <div class="swipe"><img src="http://soso7.gtimg.cn/sosopic/0/9753840491533797213/640" /></div>
+            <div class="swipe"><img src="http://soso3.gtimg.cn/sosopic/0/7153244323565627905/640" /></div>
+            <div class="swipe last"><img src="http://soso7.gtimg.cn/sosopic/0/8370209195439812723/640" /></div>
+        </div>
+    </div>
+<script type="text/javascript">
+    $(function(){
+        //Swipe(document.getElementById('wrapper'));
+        //document.addEventListener('touchmove',function(){alert(1)},false);
+        new NAVY.IMAGEMOVE({wrapper:'#wrapper',container:'#content',target:'.swipe'},{marginR:10});
+    });
+</script>
+</body>
+</html>
