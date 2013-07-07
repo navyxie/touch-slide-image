@@ -60,7 +60,7 @@ NAVY.IMAGEMOVE.prototype = {
         wrapperObj.on(eventsTxt,function(e){
             var eTarget = e;
             if(NAVY.OS.phone){
-                // if device is mobile , dosometing ,is jquery bug? beacause e.pageX or e.pageY is undefine
+                // if device is mobile , dosometing ,is jquery bug? beacause e.pageX or e.pageY is undefine,no,see:http://stackoverflow.com/questions/4780837/is-there-an-equivalent-to-e-pagex-position-for-touchstart-event-as-there-is-fo
                 eTarget = eTarget.originalEvent;
             };
             switch(e.type){
@@ -83,7 +83,7 @@ NAVY.IMAGEMOVE.prototype = {
     },
     startMove:function(e){
         /**
-         * do someting if device is mobile,beacause e.pageX or e.pageY is undefine ,jqeury bug?
+         * do someting if device is mobile,beacause e.pageX or e.pageY is undefine ,jqeury bug? no, see:http://stackoverflow.com/questions/4780837/is-there-an-equivalent-to-e-pagex-position-for-touchstart-event-as-there-is-fo
          * refer to swipe.js https://github.com/bradbirdsall/Swipe
          */
         if(NAVY.OS.phone){
